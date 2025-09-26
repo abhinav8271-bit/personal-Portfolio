@@ -196,6 +196,12 @@
             }
         }
 
+        /* Certification Card Glow */
+        .certification-card:hover {
+            box-shadow: 0 0 30px rgba(20, 184, 166, 0.3), 0 0 10px rgba(94, 234, 212, 0.2);
+            border-color: rgba(94, 234, 212, 0.5);
+        }
+        
         /* Testimonial Slider */
         .testimonial-item {
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
