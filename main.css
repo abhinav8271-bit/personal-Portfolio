@@ -1,0 +1,202 @@
+     body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #050505; /* Darker base */
+            color: #e5e5e5;
+            cursor: auto; /* Use default cursor */
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+            background-size: 25px 25px;
+        }
+        
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050505;
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        }
+        #preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-ring {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+        .loader-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border: 8px solid #14b8a6;
+            border-radius: 50%;
+            animation: loader-ring-anim 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #14b8a6 transparent transparent transparent;
+        }
+        .loader-ring div:nth-child(1) { animation-delay: -0.45s; }
+        .loader-ring div:nth-child(2) { animation-delay: -0.3s; }
+        .loader-ring div:nth-child(3) { animation-delay: -0.15s; }
+        @keyframes loader-ring-anim {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+        /* Aurora Background Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(20, 184, 166, 0.15), transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(94, 234, 212, 0.15), transparent 40%);
+            z-index: -1;
+            animation: aurora 20s infinite alternate ease-in-out;
+        }
+
+        @keyframes aurora {
+            from { transform: rotate(0deg) scale(1); }
+            to { transform: rotate(360deg) scale(1.1); }
+        }
+
+        /* Animated background gradient for the hero section */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #1f2937, #111827, #030712, #1f2937);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism effect with glowing border */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(20, 184, 166, 0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            transform: translateX(-110%) skewX(-45deg);
+        }
+        .glass-effect:hover::after {
+            opacity: 1;
+            transform: translateX(110%) skewX(-45deg);
+            transition: transform 1s ease-in-out;
+        }
+        
+        /* Typewriter effect */
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: .15em solid #14b8a6; /* The cursor */
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .1em;
+            animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #14b8a6; }
+        }
+
+        /* Scroll-triggered animations */
+        .reveal {
+            position: relative;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .reveal.active {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        .reveal.bento-item {
+            transition-delay: var(--delay, 0s);
+        }
+
+        /* 3D tilt effect for project cards */
+        .project-card {
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        /* Skill bar animation */
+        .skill-bar-fill {
+            transform: translateX(-100%);
+            transition: transform 1.5s ease-out;
+        }
+
+        .skill-bar.active .skill-bar-fill {
+            transform: translateX(0);
+        }
+
+        /* Bento Grid for Services */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .bento-item {
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bento-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 40px rgba(20, 184, 166, 0.25);
+        }
+        .bento-item.col-span-2 {
+            grid-column: span 2;
+        }
+        @media (max-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+         @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            .bento-item.col-span-2 {
+                grid-column: span 1;
+            }
+        }
+
+        /* Testimonial Slider */
+        .testimonial-item {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }

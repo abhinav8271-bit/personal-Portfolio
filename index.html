@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinav Sinha | My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="antialiased">
+
+ 
+    <div id="preloader">
+        <div class="loader-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header id="header" class="glass-effect fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="block">
+                <img src="/componets/logo098.png" alt="AS Logo" class="h-12 w-auto transition-transform duration-300 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(20,184,166,0.5)]">
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-teal-400 transition">About</a>
+                <a href="#services" class="text-gray-300 hover:text-teal-400 transition">Services</a>
+                <a href="#skills" class="text-gray-300 hover:text-teal-400 transition">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-teal-400 transition">Projects</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-teal-400 transition">Testimonials</a>
+                <a href="#contact" class="text-gray-300 hover:text-teal-400 transition">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 sm:px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-teal-400">About</a>
+            <a href="#services" class="block py-2 text-gray-300 hover:text-teal-400">Services</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-teal-400">Skills</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-teal-400">Projects</a>
+            <a href="#testimonials" class="block py-2 text-gray-300 hover:text-teal-400">Testimonials</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-teal-400">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="hero" class="min-h-screen flex items-center animated-gradient relative">
+            <canvas id="particle-canvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
+            <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+                <div class="typewriter inline-block">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4">Hi, I'm Abhinav Sinha.</h1>
+                </div>
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">A Creative Full Stack Developer Transforming Ideas into Interactive Digital Experiences.</p>
+                <a href="#projects" class="bg-teal-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-teal-700 transition-transform transform hover:scale-105 duration-300">View My Work</a>
+            </div>
+             <!-- Scroll down indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+                <a href="#about" aria-label="Scroll down">
+                    <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center items-start p-1">
+                        <div class="w-1 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-gray-900/50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">About Me</h2>
+                    <div class="w-24 h-1 bg-teal-500 mx-auto mt-2"></div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12 reveal">
+                    <div class="md:w-1/3">
+                        <img src="/componets/photo.png" alt="Abhinav photo" class="rounded-full shadow-2xl w-64 h-64 md:w-80 md:h-80 mx-auto object-cover border-4 border-teal-500">
+                    </div>
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h3 class="text-3xl font-semibold text-white mb-4">Full-Stack Developer</h3>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            I’m a full-stack developer who builds end-to-end web products — from responsive frontends to reliable backend services and databases. I’m actively studying artificial intelligence and experimenting with ML models and data pipelines to add smarter features like recommendations, prediction, and automation. My approach balances user experience, performance, and maintainability: I prototype fast, iterate with data, and push production-grade code. I love collaborating with designers and product teams to solve real user problems and am excited to bring AI into everyday apps.
+                        </p>
+                        <a href="https://resumebuilder-two-nu.vercel.app/" target="_blank" class="inline-block bg-transparent border border-teal-500 text-teal-400 font-semibold px-6 py-2 rounded-lg hover:bg-teal-500 hover:text-white transition duration-300">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- What I Offer Section (Bento Grid) -->
+        <section id="services" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">What I Offer</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">A blend of design, technology, and strategy to bring your ideas to life.</p>
+                    <div class="w-24 h-1 bg-teal-500 mx-auto mt-2"></div>
+                </div>
+                <div class="bento-grid max-w-5xl mx-auto reveal">
+                    <div class="bento-item glass-effect col-span-2 reveal" style="--delay: 0s;">
+                        <i data-lucide="layout-template" class="w-10 h-10 text-teal-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2">Web App Development</h3>
+                        <p class="text-gray-400">Building scalable and high-performance web applications from scratch using modern frameworks like React and Next.js.</p>
+                    </div>
+                     <div class="bento-item glass-effect reveal" style="--delay: 0.1s;">
+                        <i data-lucide="figma" class="w-10 h-10 text-teal-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2">UI/UX Design</h3>
+                        <p class="text-gray-400">Creating visually appealing and user-friendly interfaces that enhance user experience.</p>
+                    </div>
+                    <div class="bento-item glass-effect reveal" style="--delay: 0.2s;">
+                        <i data-lucide="server" class="w-10 h-10 text-teal-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2">Software Services</h3>
+                        <p class="text-gray-400">Experienced in full-stack development with modern frameworks and skilled in server management, cloud deployment, and scalable application hosting..</p>
+                    </div>
+                    <div class="bento-item glass-effect col-span-2 reveal" style="--delay: 0.3s;">
+                        <i data-lucide="smartphone" class="w-10 h-10 text-teal-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2">Responsive Design</h3>
+                        <p class="text-gray-400">Ensuring your web applications look and perform flawlessly on all devices, from desktops to mobile phones, for a seamless user journey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-900/50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">My Technical Skills</h2>
+                    <div class="w-24 h-1 bg-teal-500 mx-auto mt-2"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
+                    <!-- Technical Skills with progress bars -->
+                    <div class="space-y-6">
+                        <div class="skill-bar">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-teal-300">JavaScript (ES6+)</span>
+                                <span class="text-sm font-medium text-teal-300">72%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-teal-500 h-2.5 rounded-full skill-bar-fill" style="width: 72%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                           <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-teal-300">Python</span>
+                                <span class="text-sm font-medium text-teal-300">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-teal-500 h-2.5 rounded-full skill-bar-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                             <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-teal-300">React & Next.js</span>
+                                <span class="text-sm font-medium text-teal-300">60%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-teal-500 h-2.5 rounded-full skill-bar-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                             <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-teal-300">Node.js & Express</span>
+                                <span class="text-sm font-medium text-teal-300">66%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-teal-500 h-2.5 rounded-full skill-bar-fill" style="width: 66%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                           <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-teal-300">HTML5 & CSS3/Tailwind</span>
+                                <span class="text-sm font-medium text-teal-300">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-teal-500 h-2.5 rounded-full skill-bar-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Professional Skills as a list -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 p-4 glass-effect rounded-lg">
+                            <i data-lucide="users" class="text-teal-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Team Collaboration</h4>
+                                <p class="text-gray-400 text-sm">Agile methodologies and Git workflow proficiency.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-center gap-4 p-4 glass-effect rounded-lg">
+                            <i data-lucide="lightbulb" class="text-teal-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Problem Solving</h4>
+                                <p class="text-gray-400 text-sm">Analytical thinking to debug and create efficient solutions.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-center gap-4 p-4 glass-effect rounded-lg">
+                            <i data-lucide="figma" class="text-teal-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">UI/UX Design</h4>
+                                <p class="text-gray-400 text-sm">Figma proficiency and a keen eye for user-centric design.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Featured Projects</h2>
+                    <div class="w-24 h-1 bg-teal-500 mx-auto mt-2"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="project-card-container reveal">
+                        <div class="project-card glass-effect rounded-lg overflow-hidden group">
+                            <div class="relative">
+                                <img src="/componets/newsaggregator.png" alt="Project One" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <a href="https://drive.google.com/file/d/1FGUJYJrzlV4PuvFZN47XjU2i7A7wmcrR/view?usp=sharing" target="_blank" class="text-white bg-teal-600 px-4 py-2 rounded-lg hover:bg-teal-700 transition">Live Demo</a>
+                                    <a href="https://github.com/abhinav8271-bit/News-aggregator.git" target="_blank" class="text-white hover:text-teal-400 transition" aria-label="GitHub Repository"><i data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">News Aggregator</h3>
+                                <p class="text-gray-400 mb-4 text-sm">A news aggregator is a application that collects news stories, articles from multiple sources.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-gray-700 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full">React</span>
+                                    <span class="bg-gray-700 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full">Node.js</span>
+                                    <span class="bg-gray-700 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full">Javascript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="project-card-container reveal">
+                        <div class="project-card glass-effect rounded-lg overflow-hidden group">
+                            <div class="relative">
+                                <img src="/componets/resumebuilder.png" alt="Project Two" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <a href="https://resumebuilder-two-nu.vercel.app/" target="_blank" class="text-white bg-teal-600 px-4 py-2 rounded-lg hover:bg-teal-700 transition">Live Demo</a>
+                                    <a href="https://github.com/abhinav8271-bit/resumebuilder.git" target="_blank" class="text-white hover:text-teal-400 transition" aria-label="GitHub Repository"><i data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">Resume Builder</h3>
+                                <p class="text-gray-400 mb-4 text-sm">A resume builder is a platform that helps users create professional resumes quickly and efficiently</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-gray-700 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full">JavaScript</span>
+                                    <span class="bg-gray-700 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full">HTML</span>
+                                    <span class="bg-gray-700 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full">CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="project-card-container reveal">
+                        <div class="project-card glass-effect rounded-lg overflow-hidden group">
+                            <div class="relative">
+                                <img src="https://placehold.co/600x400/1f2937/FFFFFF?text=Project+Three+comeing+soon" alt="Project Three" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                 <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <a href="#" target="_blank" class="text-white bg-teal-600 px-4 py-2 rounded-lg hover:bg-teal-700 transition">Live Demo</a>
+                                    <a href="#" target="_blank" class="text-white hover:text-teal-400 transition" aria-label="GitHub Repository"><i data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">working on a big project</h3>
+                                <p class="text-gray-400 mb-4 text-sm">Stay Connected</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-gray-700 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full">AI</span>
+                                    <span class="bg-gray-700 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full">coming</span>
+                                    <span class="bg-gray-700 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full">soon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-gray-900/50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">What Others Say</h2>
+                    <div class="w-24 h-1 bg-teal-500 mx-auto mt-2"></div>
+                </div>
+                <div class="relative max-w-3xl mx-auto reveal glass-effect rounded-lg p-8">
+                    <div class="overflow-hidden relative h-64 sm:h-56 md:h-48 flex items-center">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-item absolute w-full text-center">
+                            <p class="text-lg md:text-xl italic text-gray-300 mb-4">"Abhinav is a developer who truly understands the intersection of design and technology. His attention to detail is second to none."</p>
+                            <p class="font-semibold text-teal-400">Tony stark</p>
+                            <p class="text-sm text-gray-500">CEO, Stark Industry</p>
+                        </div>
+                        <!-- Testimonial 2 -->
+                         <div class="testimonial-item absolute w-full text-center opacity-0 -translate-x-full">
+                            <p class="text-lg md:text-xl italic text-gray-300 mb-4">"Working with Abhinav was a breeze. He delivered our project on time and exceeded all our expectations with his creative solutions."</p>
+                            <p class="font-semibold text-teal-400">Elon musk</p>
+                            <p class="text-sm text-gray-500">CEO, Tesla</p>
+                        </div>
+                        <!-- Testimonial 3 -->
+                         <div class="testimonial-item absolute w-full text-center opacity-0 -translate-x-full">
+                            <p class="text-lg md:text-xl italic text-gray-300 mb-4">"His technical expertise in both frontend and backend development is remarkable. A true full-stack professional."</p>
+                            <p class="font-semibold text-teal-400">Emily White</p>
+                            <p class="text-sm text-gray-500">Lead Engineer, Dev Solutions</p>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <button id="prev-testimonial" class="absolute top-1/2 -translate-y-1/2 left-2 md:-left-12 text-gray-400 hover:text-teal-400 transition">
+                        <i data-lucide="chevron-left" class="w-8 h-8 md:w-10 md:h-10"></i>
+                    </button>
+                    <button id="next-testimonial" class="absolute top-1/2 -translate-y-1/2 right-2 md:-right-12 text-gray-400 hover:text-teal-400 transition">
+                        <i data-lucide="chevron-right" class="w-8 h-8 md:w-10 md:h-10"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-4 sm:px-6">
+                 <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Let's Connect</h2>
+                    <div class="w-24 h-1 bg-teal-500 mx-auto mt-2"></div>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Have a project in mind or just want to say hi? My inbox is always open.</p>
+                </div>
+                <div class="max-w-lg mx-auto text-center reveal">
+                    <a href="mailto:abhinavsinha8271@gmail.com" class="inline-block bg-teal-600 text-white font-bold text-lg px-10 py-4 rounded-lg hover:bg-teal-700 transition-transform transform hover:scale-105 duration-300">
+                        abhinavsinha8271@gmail.com
+                    </a>
+                    <div class="flex justify-center space-x-6 mt-8">
+                        <a href="https://github.com/abhinav8271-bit" target="_blank" aria-label="GitHub" class="text-gray-400 hover:text-teal-400 transition transform hover:scale-125"><i data-lucide="github" class="w-8 h-8"></i></a>
+                        <a href="https://linkedin.com/in/abhinav-sinha-926247332" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-teal-400 transition transform hover:scale-125"><i data-lucide="linkedin" class="w-8 h-8"></i></a>
+                        <a href="https://x.com/abhinav_8271?s=11" target="_blank" aria-label="Twitter" class="text-gray-400 hover:text-teal-400 transition transform hover:scale-125"><i data-lucide="twitter" class="w-8 h-8"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/50 py-6">
+        <div class="container mx-auto px-4 sm:px-6 text-center text-gray-500">
+             <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/abhinav8271-bit" target="_blank" aria-label="GitHub" class="text-gray-400 hover:text-teal-400 transition transform hover:scale-110"><i data-lucide="github" class="w-6 h-6"></i></a>
+                <a href="https://linkedin.com/in/abhinav-sinha-926247332" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-teal-400 transition transform hover:scale-110"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                <a href="https://x.com/abhinav_8271?s=11" target="_blank" aria-label="Twitter" aria-label="Twitter" class="text-gray-400 hover:text-teal-400 transition transform hover:scale-110"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+            </div>
+            <p>&copy; 2025 Abhinav Sinha. All Rights Reserved.</p>
+            <p class="text-sm mt-1">Designed & Built with <i data-lucide="heart" class="inline-block text-red-500 w-4 h-4 fill-current"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"> </script>
+</body>
+</html>
+
